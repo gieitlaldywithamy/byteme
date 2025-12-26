@@ -1,0 +1,133 @@
+:root {
+    /* Min Content Width */
+    --content-width: 25rem;
+    --font-size-s: 0.8125rem;
+    --font-size-m: 0.9375rem;
+    --font-size-l: 1.0625rem;
+
+    --pageWidth: 120ch;
+    --homeHeroImageHeight: 550px;
+    --font-weight-light: 350;
+    --font-weight-regular: 400;
+    --font-weight-bold: 500;
+
+    --font-size-l: 2em;
+    --font-size-m: 1em;
+    --font-size-s: 0.875em;
+
+    --spacing-s: -0.08em;
+    --spacing-m: -0.02em;
+    --light: #EBE7E2;
+    --lightgray: #e1daca;
+    --gray: #9c9384;
+    --darkgray: #2a354b;
+    --dark: #08142c;
+    --secondary: #274b75;
+    --tertiary: #84a59d;
+    --highlight: #8f9fa926;
+    --textHighlight: #fff23688;
+
+    --hero-image-height: 250px;
+    --hero-image-width: 250px;
+}
+
+html {
+    background-color: var(--light);
+    color: var(--darkgray);
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    color: var(--darkgray);
+    font-size: var(--font-size-m);
+    margin: 0;
+    min-height: 75vh;
+    padding: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 2rem;
+    max-width: var(--pageWidth);
+    align-items: center;
+}
+
+.poetry {
+    font-family: "Homemade Apple", cursive;
+    font-weight: 300;
+    font-style: normal;
+    color: #23001E;
+    margin: 0 auto;
+    font-size: var(--font-size-l);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.poetry.small {
+    font-size: var(--font-size-s)
+}
+
+#container {
+    font-family: "Inter", sans-serif;
+    margin: 3em;
+}
+
+.stacked-images {
+    display: grid;
+    grid-template-columns: var(--hero-image-width);
+    grid-template-rows: var(--hero-image-width);
+    width: var(--hero-image-width);
+    height: var(--hero-image-height);
+    margin: 0 auto;
+}
+
+.profile {
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 3em;
+    corner-shape: bevel circle;
+    border-radius: 5em;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.overlay-image {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    corner-shape: squircle;
+    border-radius: 50% / 1.1rem 0.5rem 0.9rem 0.7rem;
+    border-radius: 3em;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 2em 1.5em;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .stacked-images {
+        margin: 0 auto;
+    }
+
+    .poetry {
+        margin: 0 0 1rem 0;
+    }
+}

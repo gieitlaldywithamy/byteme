@@ -1,0 +1,17 @@
+---
+import BaseHead from "./BaseHead.astro";
+import "../styles/global.css"
+
+const {
+  title = "Amy Morrison",
+  description = "Finally learning to communicate in my native tongue.",
+} = Astro.props;
+---
+
+<html lang="en">
+  <BaseHead {title} {description} />
+  <body>
+    <slot></slot>
+  </body>
+</html>
+
