@@ -118,7 +118,7 @@ body {
 
     .hero {
         grid-template-columns: 1fr;
-        gap: 4rem;
+        gap: 1em;
         justify-items: center;
         text-align: center;
     }
