@@ -280,7 +280,7 @@ header {
     font-family: "Homemade Apple", cursive;
     font-weight: 300;
     font-style: normal;
-    color: #23001E;
+    color: var(--text);
     font-size: var(--font-size-l);
     margin-block-end: var(--spacing-s);
 }
