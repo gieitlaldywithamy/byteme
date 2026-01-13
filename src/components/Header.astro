@@ -1,0 +1,33 @@
+---
+import Hamburger from "./Hamburger.astro";
+import Menu from "./Menu.astro";
+import ThemeIcon from "./ThemeToggle.astro";
+const currentPath = Astro.url.pathname;
+const topLevelPath = currentPath.split("/")[1];
+console.log({ topLevelPath });
+
+const navigation = [
+    // {
+    //     label: "Garden",
+    //     url: "/notes",
+    // },
+    // {
+    //     label: "About",
+    //     url: "/about",
+    // },
+    {
+        label: "What I'm Reading",
+        url: "/current-book",
+    },
+];
+---
+
+<header>
+    <nav id="nav">
+        <a class={`logo prose ${topLevelPath === "" ? "active" : ""}`} href="/"
+            >byteme1011</a
+        >
+        <!-- <ThemeIcon /> -->
+        <Hamburger />
+    </nav>
+</header>

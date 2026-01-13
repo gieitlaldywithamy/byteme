@@ -1,17 +1,20 @@
 ---
 import BaseHead from "./BaseHead.astro";
-import "../styles/global.css"
+import Header from "../components/Header.astro";
+import "../styles/global.css";
 
 const {
-  title = "Amy Morrison",
-  description = "Finally learning to communicate in my native tongue.",
+	title = "Amy Morrison",
+	description = "Finally learning to communicate in my native tongue.",
 } = Astro.props;
 ---
 
 <html lang="en">
-  <BaseHead {title} {description} />
-  <body>
-    <slot></slot>
-  </body>
+	<BaseHead {title} {description} />
+	<body>
+		<Header />
+		<main>
+			<slot />
+		</main>
+	</body>
 </html>
-
