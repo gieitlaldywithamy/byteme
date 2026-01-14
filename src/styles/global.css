@@ -33,7 +33,7 @@
     --touch-target: 44px;
 }
 
-/* Dark mode - respects system preference */
+/* Dark mode - respects system preference 
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #1a1618;
@@ -44,7 +44,7 @@
     }
 }
 
-/* Manual dark mode override */
+/* Manual dark mode override 
 html.dark {
     --background: #1a1618;
     --foreground: #252022;
